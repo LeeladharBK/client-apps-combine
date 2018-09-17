@@ -24,11 +24,11 @@ export default class HeaderNavigation extends React.Component {
             <Link to="/books">BookList App</Link>
           </NavItem>
           <NavDropdown eventKey={3} title="Documentation" id="basic-nav-dropdown">
-            <MenuItem eventKey={3.1}>React</MenuItem>
-            <MenuItem eventKey={3.2}>Redux</MenuItem>
-            <MenuItem eventKey={3.3}>React Router</MenuItem>
+            <MenuItem eventKey={3.1} href="https://reactjs.org/docs/hello-world.html">React</MenuItem>
+            <MenuItem eventKey={3.2} href="https://redux.js.org/">Redux</MenuItem>
+            <MenuItem eventKey={3.3} href="https://github.com/ReactTraining/react-router/tree/v3/docs">React Router</MenuItem>
             <MenuItem divider />
-            <MenuItem eventKey={3.4}>React-Bootstrap</MenuItem>
+            <MenuItem eventKey={3.4} href="https://react-bootstrap.github.io/getting-started/introduction">React-Bootstrap</MenuItem>
           </NavDropdown>
         </Nav>
       </Navbar>
