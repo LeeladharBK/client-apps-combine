@@ -3,18 +3,17 @@ import React, { Component } from "react";
 // import different containers to be rendered on the screen
 import BookList from "../../containers/books/book-list";
 import BookDetail from "../../containers/books/book-detail";
-// Link is used to navigate similar  to an anchor tag
-import { Link } from "react-router-dom";
+import HeaderNavigation from "../header_navigation";
+import Footer from "../footer";
 
 export default class Books extends Component {
   render() {
     return (
       <div>
-        <Link className="btn btn-primary" to="/">
-          Home
-        </Link>
+        <HeaderNavigation />
         <BookList />
         <BookDetail />
+        <Footer />
       </div>
     );
   }

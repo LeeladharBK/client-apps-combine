@@ -8,8 +8,8 @@ import SearchBar from "./search_bar";
 import VideoList from "./video_list";
 import VideoDetail from "./video_detail";
 const API_KEY = "AIzaSyAg9oT9ZnHUbVHJjYBjJN5Ikuy5nKdWS_Y";
-// Link is used to navigate similar  to an anchor tag
-import { Link } from "react-router-dom";
+import HeaderNavigation from "../header_navigation";
+import Footer from "../footer";
 
 // JSX componenet should produce html
 export default class Youtube extends Component {
@@ -39,16 +39,15 @@ export default class Youtube extends Component {
       this.videoSearch(term);
     }, 500);
     return (
-      <div>
-        <Link className="btn btn-primary" to="/">
-          Home
-        </Link>
+      <div className="main-container">
+        <HeaderNavigation />
         <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
           videos={this.state.videos}
         />
+        <Footer />
       </div>
     );
   }

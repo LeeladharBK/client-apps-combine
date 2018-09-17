@@ -48,3 +48,16 @@ td:first-of-type, td:first-of-type > div {
 .list-group-item:hover {
   background-color: #eee;
 }
+
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+.main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
